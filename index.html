@@ -1,149 +1,434 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sammy S. Mutuku | Data Analyst • Data Scientist • ML Engineer</title>
 
-<meta charset="UTF-8">
+  <meta name="description" content="Data Analyst • Data Scientist • Machine Learning Engineer. Projects, competitions, experience, tools, and education." />
+  <meta property="og:title" content="Sammy S. Mutuku | Data Analyst • Data Scientist • ML Engineer" />
+  <meta property="og:description" content="Projects, competitions, experience, tools, and education." />
+  <meta property="og:type" content="website" />
 
-<title>Sammy Mutuku | Machine Learning Engineer</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-<header>
-
-<h1>Sammy S. Mutuku</h1>
-
-<p class="tagline">
-Machine Learning • Predictive Modeling • Data Science
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/subu53">GitHub</a>
-
-<a href="https://www.linkedin.com/in/samsubu/">LinkedIn</a>
-
-<a href="assets/resume.pdf">Resume</a>
-
-</div>
-
-</header>
-
-
-
-<section id="about">
-
-<h2>About</h2>
-
-<p>
-
-Data scientist focused on predictive modeling and machine learning systems
-for real-world applications. My work spans finance, agriculture,
-and digital platforms.
-
-</p>
-
-</section>
-
-
-
-<section id="metrics">
-
-<h2>Profile Metrics</h2>
-
-<div class="metrics">
-
-<div class="metric">
-<h3>GitHub Repositories</h3>
-<p id="repo-count">Loading...</p>
-</div>
-
-<div class="metric">
-<h3>Zindi Competitions</h3>
-<p>5 Active / Completed</p>
-</div>
-
-<div class="metric">
-<h3>Top Rank</h3>
-<p>#47</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="projects">
-
-<h2>Featured Projects</h2>
-
-<div id="project-container">
-
-</div>
-
-</section>
-
-
-
-<section id="competitions">
-
-<h2>Competitions</h2>
-
-<ul>
-
-<li>AgriBORA Commodity Price Forecasting — Rank 87 / 365</li>
-
-<li>Farm to Feed Basket Recommendation — Rank 47 / 266</li>
-
-<li>DigiCow Farmer Training Adoption — Rank 171 / 388</li>
-
-<li>Financial Health Prediction — Rank 291 / 797</li>
-
-<li>Rhea Soil Nutrient Prediction — Rank 117 / 205</li>
-
-</ul>
-
-<p>
-
-Competition portfolio:
-
-<a href="https://zindi.africa/users/Sammy_S_Mutuku/competitions/portfolio">
-
-View full profile
-
-</a>
-
-</p>
-
-</section>
-
-
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: sammysubu@gmail.com</p>
-
-<p>Location: Nairobi, Kenya</p>
-
-</section>
-
-
-
-<footer>
-
-<p>© 2026 Sammy Mutuku</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+  <div class="bg"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="hero" id="top">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="dot"></span>
+        <span class="brandText">Sammy Mutuku</span>
+      </a>
+
+      <div class="navlinks" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Tools</a>
+        <a href="#work">Work</a>
+        <a href="#competitions">Competitions</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="navcta">
+        <a class="btn ghost" href="https://github.com/subu53" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/samsubu/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn solid" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <div class="heroWrap">
+      <div class="heroGrid">
+        <div class="heroText">
+          <p class="kicker">Data Analyst • Data Scientist • Machine Learning Engineer</p>
+
+          <h1>
+            I turn <span class="grad">data</span> into decisions,
+            and models into <span class="grad2">shippable</span> systems.
+          </h1>
+
+          <p class="sub">
+            I build dashboards, KPI reports, and statistical analyses — and I also train machine learning models
+            (from classic ML to deep learning) with careful validation and interpretability.
+            My focus is practical, business-ready work: clean pipelines, strong evaluation, clear insights.
+          </p>
+
+          <div class="heroBadges">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Excel</span>
+            <span class="chip">Tableau/BI</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">XGBoost</span>
+            <span class="chip">SHAP</span>
+            <span class="chip">Streamlit</span>
+          </div>
+
+          <div class="heroBtns">
+            <a class="btn solid" href="#work">View Featured Work</a>
+            <a class="btn ghost" href="#contact">Hire / Collaborate</a>
+          </div>
+
+          <div class="quickFacts">
+            <div class="qf">
+              <div class="qfLabel">Location</div>
+              <div class="qfValue">Nairobi, Kenya</div>
+            </div>
+            <div class="qf">
+              <div class="qfLabel">Email</div>
+              <div class="qfValue"><a href="mailto:sammysubu@gmail.com">sammysubu@gmail.com</a></div>
+            </div>
+            <div class="qf">
+              <div class="qfLabel">Open To</div>
+              <div class="qfValue">Remote • Hybrid • Contract</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="heroPanel" aria-label="Profile metrics">
+          <div class="panelTitle">Profile Snapshot</div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="metricTop">
+                <div class="metricLabel">GitHub Repositories</div>
+                <div class="metricDot"></div>
+              </div>
+              <div class="metricValue" id="repo-count">—</div>
+              <div class="metricHint">Public repos (non-fork)</div>
+            </div>
+
+            <div class="metric">
+              <div class="metricTop">
+                <div class="metricLabel">Featured Projects</div>
+                <div class="metricDot red"></div>
+              </div>
+              <div class="metricValue" id="featured-count">—</div>
+              <div class="metricHint">Pinned on this site</div>
+            </div>
+
+            <div class="metric">
+              <div class="metricTop">
+                <div class="metricLabel">Last Updated Repo</div>
+                <div class="metricDot"></div>
+              </div>
+              <div class="metricValue small" id="last-updated">—</div>
+              <div class="metricHint">Most recently updated</div>
+            </div>
+          </div>
+
+          <div class="panelFooter">
+            <a class="inline" href="https://zindi.africa/users/sammy_s_mutuku" target="_blank" rel="noreferrer">
+              Zindi profile →
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="sectionHead center">
+        <h2>About</h2>
+        <p>
+          I’m a Data Analyst and aspiring Data Scientist who enjoys the full stack of data work:
+          cleaning and exploration, KPI reporting, dashboards, statistical reasoning, and machine learning.
+        </p>
+      </div>
+
+      <div class="twoCol">
+        <article class="card">
+          <h3>What I do as a Data Analyst</h3>
+          <ul class="bullets">
+            <li><b>KPI dashboards</b>: define metrics, build dashboards, and track performance over time.</li>
+            <li><b>Reporting & insights</b>: convert messy data into clean summaries and actionable recommendations.</li>
+            <li><b>SQL + Excel workflows</b>: query, transform, and validate data reliably.</li>
+            <li><b>Stakeholder communication</b>: present results clearly with charts, narrative, and business impact.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>What I do as a Data Scientist / ML Engineer</h3>
+          <ul class="bullets">
+            <li><b>Predictive modeling</b>: regression/classification with leakage-safe validation.</li>
+            <li><b>Feature engineering</b>: domain-driven features + rigorous ablations.</li>
+            <li><b>Interpretability</b>: SHAP/LIME explanations for trust and adoption.</li>
+            <li><b>Deployable demos</b>: Streamlit apps + GitHub-ready documentation.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="callout">
+        <div class="calloutTitle">My working style</div>
+        <p class="muted">
+          I prefer clean baselines first, then disciplined iteration:
+          better features, better validation, careful tuning, and strong reporting.
+          The goal is not just a score — it’s reliable performance you can explain.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== TOOLS / SKILLS ===== -->
+    <section class="section" id="skills">
+      <div class="sectionHead center">
+        <h2>Tools & Skills</h2>
+        <p>
+          Clear and explicit tool coverage (CV-style). This is what I’m comfortable using in real projects.
+        </p>
+      </div>
+
+      <div class="skillsGrid">
+        <div class="card">
+          <h3>Data Analysis</h3>
+          <div class="stack">
+            <span class="pill">SQL (joins, CTEs, window functions)</span>
+            <span class="pill">Excel (pivots, cleaning, dashboards)</span>
+            <span class="pill">EDA & descriptive statistics</span>
+            <span class="pill">Cohort / retention analysis</span>
+            <span class="pill">A/B test thinking (basic)</span>
+            <span class="pill">Data quality checks</span>
+            <span class="pill">KPI definition & reporting</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Visualization & BI</h3>
+          <div class="stack">
+            <span class="pill">Tableau / BI dashboards</span>
+            <span class="pill">Matplotlib / Plotly</span>
+            <span class="pill">Storytelling with data</span>
+            <span class="pill">Executive summaries</span>
+            <span class="pill">Data presentation for stakeholders</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Machine Learning</h3>
+          <div class="stack">
+            <span class="pill">Scikit-learn pipelines</span>
+            <span class="pill">XGBoost / LightGBM</span>
+            <span class="pill">Feature engineering</span>
+            <span class="pill">Leakage-safe validation</span>
+            <span class="pill">Calibration</span>
+            <span class="pill">Model evaluation (AUC, F1, RMSE)</span>
+            <span class="pill">Hyperparameter tuning</span>
+            <span class="pill">Ensembles & stacking</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Deep Learning & NLP</h3>
+          <div class="stack">
+            <span class="pill">TensorFlow / Keras</span>
+            <span class="pill">Transformers (BERT-style)</span>
+            <span class="pill">Text preprocessing</span>
+            <span class="pill">Embeddings</span>
+            <span class="pill">Sequence models (LSTM basics)</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Explainability</h3>
+          <div class="stack">
+            <span class="pill">SHAP</span>
+            <span class="pill">LIME</span>
+            <span class="pill">Feature importance</span>
+            <span class="pill">Error analysis</span>
+            <span class="pill">Model debugging</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Engineering & Workflow</h3>
+          <div class="stack">
+            <span class="pill">Git / GitHub</span>
+            <span class="pill">Reproducible notebooks</span>
+            <span class="pill">Streamlit demos</span>
+            <span class="pill">Documentation</span>
+            <span class="pill">Project structure & README</span>
+            <span class="pill">API thinking (basic)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED WORK ===== -->
+    <section class="section" id="work">
+      <div class="sectionHead center">
+        <h2>Featured Work</h2>
+        <p>
+          Projects that best represent my capabilities: analytics + modeling + evaluation + communication.
+          (Auto-filled from GitHub; you can “pin” which repos show here in <code>script.js</code>.)
+        </p>
+      </div>
+
+      <div class="featuredWrap">
+        <div id="featured-container" class="grid featured"></div>
+        <div class="muted centerText" id="featured-status"></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="sectionHead center smallTop">
+        <h2>All Projects</h2>
+        <p>
+          Search and filter my repositories. Sorted by most recently updated by default.
+        </p>
+      </div>
+
+      <div class="toolbar">
+        <input id="projectSearch" class="search" type="search" placeholder="Search projects (pricing, credit, sentiment, forecasting, dashboard...)"/>
+        <select id="sortSelect" class="select">
+          <option value="updated">Sort: Recently updated</option>
+          <option value="stars">Sort: Most stars</option>
+          <option value="name">Sort: Name (A–Z)</option>
+        </select>
+        <select id="langSelect" class="select">
+          <option value="all">Language: All</option>
+        </select>
+      </div>
+
+      <div id="project-container" class="grid"></div>
+      <div class="muted centerText" id="project-status"></div>
+    </section>
+
+    <!-- ===== COMPETITIONS ===== -->
+    <section class="section" id="competitions">
+      <div class="sectionHead center">
+        <h2>Competitions</h2>
+        <p>
+          I use competitions to practice fast iteration, disciplined validation, and clear writeups.
+          I focus on solutions that are both high-performing and defensible.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Zindi Highlights</h3>
+        <ul class="bullets">
+          <li><b>AgriBORA Commodity Price Forecasting</b> — forecasting & feature engineering</li>
+          <li><b>Farm to Feed Basket Recommendation</b> — recommendation logic & evaluation</li>
+          <li><b>DigiCow Farmer Training Adoption</b> — classification with careful validation</li>
+          <li><b>Financial Health Prediction</b> — robust modeling and leakage prevention</li>
+          <li><b>Rhea Soil Nutrient Prediction</b> — regression, error analysis, modeling strategy</li>
+        </ul>
+
+        <div class="row centerRow">
+          <a class="btn ghost" href="https://zindi.africa/" target="_blank" rel="noreferrer">Zindi</a>
+          <a class="btn solid" href="https://zindi.africa/users/sammy_s_mutuku" target="_blank" rel="noreferrer">
+            View my Zindi profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section" id="education">
+      <div class="sectionHead center">
+        <h2>Education</h2>
+        <p>
+          My training combines university foundations with applied, project-heavy learning.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="titem">
+          <div class="tline"></div>
+          <div class="tcard">
+            <div class="tTop">
+              <h3>BSc in Data Science — KCA University</h3>
+              <span class="badge">Sep 2023 – Present</span>
+            </div>
+            <p class="muted">
+              Core foundations in statistics, programming, and applied data science workflows.
+            </p>
+          </div>
+        </div>
+
+        <div class="titem">
+          <div class="tline"></div>
+          <div class="tcard">
+            <div class="tTop">
+              <h3>Applied Data Science Lab — WorldQuant University</h3>
+              <span class="badge">Nov 2023 – May 2024</span>
+            </div>
+            <p class="muted">
+              Practical projects with real modeling, evaluation, and end-to-end analysis.
+            </p>
+          </div>
+        </div>
+
+        <div class="titem">
+          <div class="tline"></div>
+          <div class="tcard">
+            <div class="tTop">
+              <h3>Diploma in Mathematics & Statistics — Kenya Polytechnic University College</h3>
+              <span class="badge">Completed</span>
+            </div>
+            <p class="muted">
+              Strong base in quantitative reasoning and statistical thinking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="sectionHead center">
+        <h2>Contact</h2>
+        <p>
+          If you need a Data Analyst who can also build models and ship demos, let’s talk.
+        </p>
+      </div>
+
+      <div class="twoCol">
+        <div class="card">
+          <h3>Reach me</h3>
+          <p class="muted">
+            Email: <a href="mailto:sammysubu@gmail.com">sammysubu@gmail.com</a><br/>
+            LinkedIn: <a href="https://www.linkedin.com/in/samsubu/" target="_blank" rel="noreferrer">/in/samsubu</a>
+          </p>
+
+          <div class="row">
+            <a class="btn solid" href="mailto:sammysubu@gmail.com">Email me</a>
+            <a class="btn ghost" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Quick links</h3>
+          <div class="stack">
+            <a class="linkCard" href="https://github.com/subu53" target="_blank" rel="noreferrer">
+              <span>GitHub</span><span class="arrow">→</span>
+            </a>
+            <a class="linkCard" href="https://zindi.africa/users/sammy_s_mutuku" target="_blank" rel="noreferrer">
+              <span>Zindi Profile</span><span class="arrow">→</span>
+            </a>
+            <a class="linkCard" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">
+              <span>Resume (PDF)</span><span class="arrow">→</span>
+            </a>
+          </div>
+
+          <p class="muted smallNote">
+            Tip: Upload your PDF into <code>assets/</code> and keep the exact file name used in the link above.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> Sammy Mutuku</div>
+    <a href="#top" class="inline">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
