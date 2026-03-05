@@ -10,12 +10,19 @@
   <meta property="og:description" content="Projects, competitions, experience, tools, and education." />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="bg"></div>
+  <div class="orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
 
   <!-- ===== NAV ===== -->
   <header class="hero" id="top">
@@ -24,6 +31,7 @@
         <span class="dot"></span>
         <span class="brandText">Sammy S. Mutuku</span>
       </a>
+      <button class="menuBtn" aria-label="Toggle menu">☰</button>
 
       <div class="navlinks" aria-label="Primary navigation">
         <a href="#about">About</a>
@@ -37,7 +45,7 @@
       <div class="navcta">
         <a class="btn ghost" href="https://github.com/subu53" target="_blank" rel="noreferrer">GitHub</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/samsubu/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn solid" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a class="btn solid" href="Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
       </div>
     </nav>
 
@@ -135,7 +143,7 @@
   <main class="main">
     <!-- ===== ABOUT ===== -->
     <section class="section" id="about">
-      <div class="sectionHead center">
+      <div class="sectionHead center reveal">
         <h2>About</h2>
         <p>
           I’m a Data Analyst and aspiring Data Scientist who enjoys the full stack of data work:
@@ -143,8 +151,8 @@
         </p>
       </div>
 
-      <div class="twoCol">
-        <article class="card">
+      <div class="twoCol reveal-stagger">
+        <article class="card reveal">
           <h3>What I do as a Data Analyst</h3>
           <ul class="bullets">
             <li><b>KPI dashboards</b>: define metrics, build dashboards, and track performance over time.</li>
@@ -154,7 +162,7 @@
           </ul>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <h3>What I do as a Data Scientist / ML Engineer</h3>
           <ul class="bullets">
             <li><b>Predictive modeling</b>: regression/classification with leakage-safe validation.</li>
@@ -165,7 +173,7 @@
         </article>
       </div>
 
-      <div class="callout">
+      <div class="callout reveal">
         <div class="calloutTitle">My working style</div>
         <p class="muted">
           I prefer clean baselines first, then disciplined iteration:
@@ -177,15 +185,15 @@
 
     <!-- ===== TOOLS / SKILLS ===== -->
     <section class="section" id="skills">
-      <div class="sectionHead center">
+      <div class="sectionHead center reveal">
         <h2>Tools & Skills</h2>
         <p>
           Clear and explicit tool coverage (CV-style). This is what I’m comfortable using in real projects.
         </p>
       </div>
 
-      <div class="skillsGrid">
-        <div class="card">
+      <div class="skillsGrid reveal-stagger">
+        <div class="card reveal">
           <h3>Data Analysis</h3>
           <div class="stack">
             <span class="pill">SQL (joins, CTEs, window functions)</span>
@@ -198,7 +206,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Visualization & BI</h3>
           <div class="stack">
             <span class="pill">Tableau / BI dashboards</span>
@@ -209,7 +217,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Machine Learning</h3>
           <div class="stack">
             <span class="pill">Scikit-learn pipelines</span>
@@ -223,7 +231,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Deep Learning & NLP</h3>
           <div class="stack">
             <span class="pill">TensorFlow / Keras</span>
@@ -234,7 +242,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Explainability</h3>
           <div class="stack">
             <span class="pill">SHAP</span>
@@ -245,7 +253,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Engineering & Workflow</h3>
           <div class="stack">
             <span class="pill">Git / GitHub</span>
@@ -261,29 +269,28 @@
 
     <!-- ===== FEATURED WORK ===== -->
     <section class="section" id="work">
-      <div class="sectionHead center">
+      <div class="sectionHead center reveal">
         <h2>Featured Work</h2>
         <p>
-          Projects that best represent my capabilities: analytics + modeling + evaluation + communication.
-          (Auto-filled from GitHub; you can “pin” which repos show here in <code>script.js</code>.)
+          Handpicked projects that showcase end-to-end data science capabilities.
         </p>
       </div>
 
-      <div class="featuredWrap">
+      <div class="featuredWrap reveal">
         <div id="featured-container" class="grid featured"></div>
         <div class="muted centerText" id="featured-status"></div>
       </div>
 
       <div class="divider"></div>
 
-      <div class="sectionHead center smallTop">
+      <div class="sectionHead center smallTop reveal">
         <h2>All Projects</h2>
         <p>
           Search and filter my repositories. Sorted by most recently updated by default.
         </p>
       </div>
 
-      <div class="toolbar">
+      <div class="toolbar reveal">
         <input id="projectSearch" class="search" type="search" placeholder="Search projects (pricing, credit, sentiment, forecasting, dashboard...)"/>
         <select id="sortSelect" class="select">
           <option value="updated">Sort: Recently updated</option>
@@ -301,7 +308,7 @@
 
     <!-- ===== COMPETITIONS ===== -->
     <section class="section" id="competitions">
-      <div class="sectionHead center">
+      <div class="sectionHead center reveal">
         <h2>Competitions</h2>
         <p>
           I use competitions to practice fast iteration, disciplined validation, and clear writeups.
@@ -309,7 +316,7 @@
         </p>
       </div>
 
-      <div class="card">
+      <div class="card reveal">
         <h3>Zindi Highlights</h3>
         <ul class="bullets">
           <li><b>AgriBORA Commodity Price Forecasting</b> — forecasting & feature engineering</li>
@@ -330,14 +337,14 @@
 
     <!-- ===== EDUCATION ===== -->
     <section class="section" id="education">
-      <div class="sectionHead center">
+      <div class="sectionHead center reveal">
         <h2>Education</h2>
         <p>
           My training combines university foundations with applied, project-heavy learning.
         </p>
       </div>
 
-      <div class="timeline">
+      <div class="timeline reveal">
         <div class="titem">
           <div class="tline"></div>
           <div class="tcard">
@@ -381,7 +388,7 @@
 
     <!-- ===== CONTACT ===== -->
     <section class="section" id="contact">
-      <div class="sectionHead center">
+      <div class="sectionHead center reveal">
         <h2>Contact</h2>
         <p>
           If you need a Data Analyst who can also build models and ship demos, let’s talk.
@@ -389,7 +396,7 @@
       </div>
 
       <div class="twoCol">
-        <div class="card">
+        <div class="card reveal">
           <h3>Reach me</h3>
           <p class="muted">
             Email: <a href="mailto:sammysubu@gmail.com">sammysubu@gmail.com</a><br/>
@@ -398,11 +405,11 @@
 
           <div class="row">
             <a class="btn solid" href="mailto:sammysubu@gmail.com">Email me</a>
-            <a class="btn ghost" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
+            <a class="btn ghost" href="Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Quick links</h3>
           <div class="stack">
             <a class="linkCard" href="https://github.com/subu53" target="_blank" rel="noreferrer">
@@ -411,14 +418,11 @@
             <a class="linkCard" href="https://zindi.africa/users/sammy_s_mutuku" target="_blank" rel="noreferrer">
               <span>Zindi Profile</span><span class="arrow">→</span>
             </a>
-            <a class="linkCard" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">
+            <a class="linkCard" href="Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">
               <span>Resume (PDF)</span><span class="arrow">→</span>
             </a>
           </div>
 
-          <p class="muted smallNote">
-            Tip: Upload your PDF into <code>assets/</code> and keep the exact file name used in the link above.
-          </p>
         </div>
       </div>
     </section>
@@ -428,6 +432,8 @@
     <div>© <span id="year"></span> Sammy Mutuku</div>
     <a href="#top" class="inline">Back to top ↑</a>
   </footer>
+
+  <button class="scrollTop" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
   <script src="script.js"></script>
 </body>

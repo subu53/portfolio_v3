@@ -223,4 +223,74 @@ document.addEventListener("DOMContentLoaded", () => {
     $("project-status").textContent = "Could not load GitHub repos (API rate limit). Refresh after a minute.";
     $("featured-status").textContent = "Featured repos could not load due to GitHub API limit. Refresh later.";
   });
+
+  // Scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Active nav highlighting
+  const sections = document.querySelectorAll('.section[id]');
+  const navLinks = document.querySelectorAll('.navlinks a');
+
+  function updateActiveNav() {
+    const scrollY = window.scrollY + 120;
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+      if (scrollY >= top && scrollY < top + height) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+  // Nav scroll effect
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  // Mobile menu toggle
+  const menuBtn = document.querySelector('.menuBtn');
+  const navlinksEl = document.querySelector('.navlinks');
+  const navctaEl = document.querySelector('.navcta');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      navlinksEl.classList.toggle('open');
+      navctaEl.classList.toggle('open');
+      menuBtn.textContent = navlinksEl.classList.contains('open') ? '✕' : '☰';
+    });
+    // Close menu on link click
+    navlinksEl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navlinksEl.classList.remove('open');
+        navctaEl.classList.remove('open');
+        menuBtn.textContent = '☰';
+      });
+    });
+  }
+
+  // Scroll to top button
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('show', window.scrollY > 500);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });
