@@ -191,7 +191,10 @@ async function fetchAllRepos(){
   // stats
   $("repo-count").textContent = String(clean.length);
   const mostRecent = clean.slice().sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at))[0];
-  $("last-updated").textContent = mostRecent ? `${mostRecent.name} (${fmtDate(mostRecent.updated_at)})` : "—";
+  const lastUpdatedEl = $("last-updated");
+  if (lastUpdatedEl) {
+    lastUpdatedEl.textContent = mostRecent ? `${mostRecent.name} — ${fmtDate(mostRecent.updated_at)}` : "—";
+  }
 
   state.all = clean;
 
@@ -220,8 +223,15 @@ document.addEventListener("DOMContentLoaded", () => {
   $("featured-count").textContent = "0";
 
   fetchAllRepos().catch(() => {
-    $("project-status").textContent = "Could not load GitHub repos (API rate limit). Refresh after a minute.";
-    $("featured-status").textContent = "Featured repos could not load due to GitHub API limit. Refresh later.";
+    $("project-status").textContent = "Could not load GitHub repos. Refresh after a minute.";
+    $("featured-status").textContent = "Featured repos could not load. Refresh later.";
+    // Graceful fallback for metrics
+    const repoCount = $("repo-count");
+    const featuredCount = $("featured-count");
+    const lastUpdated = $("last-updated");
+    if (repoCount && repoCount.textContent === "—") repoCount.textContent = "–";
+    if (featuredCount && featuredCount.textContent === "0") featuredCount.textContent = "–";
+    if (lastUpdated) lastUpdated.textContent = "Refresh to load";
   });
 
   // Scroll reveal
