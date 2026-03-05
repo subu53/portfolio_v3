@@ -1138,7 +1138,6 @@ h1 {
     display: flex;
     margin-bottom: 20px;
   }
-  .heroPhotoMobile .photoFrame { }
   .heroPanel { position: static; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .grid.featured { grid-template-columns: 1fr; }

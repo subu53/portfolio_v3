@@ -229,8 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const repoCount = $("repo-count");
     const featuredCount = $("featured-count");
     const lastUpdated = $("last-updated");
-    if (repoCount && repoCount.textContent === "—") repoCount.textContent = "–";
-    if (featuredCount && featuredCount.textContent === "0") featuredCount.textContent = "–";
+    if (repoCount) repoCount.textContent = "\u2013";
+    if (featuredCount) featuredCount.textContent = "\u2013";
     if (lastUpdated) lastUpdated.textContent = "Refresh to load";
   });
 
