@@ -161,21 +161,21 @@
         <!-- Snapshot -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="flex flex-col gap-2 rounded-2xl border border-primary/20 bg-card-dark p-8 items-center text-center group hover:border-primary/50 transition-colors">
-            <span class="material-symbols-outlined text-primary text-4xl mb-2 group-hover:scale-110 transition-transform">analytics</span>
-            <p class="text-white text-3xl font-bold tracking-tight">Analytics</p>
-            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">Dashboards • KPIs • Reporting</p>
+            <span class="material-symbols-outlined text-primary text-4xl mb-2 group-hover:scale-110 transition-transform">hub</span>
+            <p class="text-white text-3xl font-bold tracking-tight" id="repo-count">—</p>
+            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">Public Repositories</p>
           </div>
 
           <div class="flex flex-col gap-2 rounded-2xl border border-accent/20 bg-card-dark p-8 items-center text-center group hover:border-accent/50 transition-colors">
-            <span class="material-symbols-outlined text-accent text-4xl mb-2 group-hover:scale-110 transition-transform">science</span>
-            <p class="text-white text-3xl font-bold tracking-tight">Modeling</p>
-            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">Forecasting • Classification • NLP</p>
+            <span class="material-symbols-outlined text-accent text-4xl mb-2 group-hover:scale-110 transition-transform">star</span>
+            <p class="text-white text-3xl font-bold tracking-tight" id="featured-count">0</p>
+            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">Featured Repositories</p>
           </div>
 
           <div class="flex flex-col gap-2 rounded-2xl border border-primary/20 bg-card-dark p-8 items-center text-center group hover:border-primary/50 transition-colors">
-            <span class="material-symbols-outlined text-primary text-4xl mb-2 group-hover:scale-110 transition-transform">deployed_code</span>
-            <p class="text-white text-3xl font-bold tracking-tight">Delivery</p>
-            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">GitHub • Apps • Deployable Demos</p>
+            <span class="material-symbols-outlined text-primary text-4xl mb-2 group-hover:scale-110 transition-transform">schedule</span>
+            <p class="text-white text-lg font-bold tracking-tight text-center" id="last-updated">—</p>
+            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">Latest Updated Repo</p>
           </div>
         </section>
 
@@ -299,8 +299,6 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4 h-full md:h-[620px]">
-
-            <!-- Large -->
             <div class="md:col-span-8 md:row-span-2 relative group overflow-hidden rounded-2xl bg-card-dark border border-slate-800">
               <div
                 class="absolute inset-0 opacity-35 group-hover:scale-105 transition-transform duration-500"
@@ -329,7 +327,6 @@
               </div>
             </div>
 
-            <!-- Small -->
             <div class="md:col-span-4 md:row-span-1 relative group overflow-hidden rounded-2xl bg-card-dark border border-slate-800">
               <div
                 class="absolute inset-0 opacity-30 group-hover:scale-105 transition-transform duration-500"
@@ -347,7 +344,6 @@
               </div>
             </div>
 
-            <!-- Small -->
             <div class="md:col-span-4 md:row-span-1 relative group overflow-hidden rounded-2xl bg-card-dark border border-slate-800">
               <div
                 class="absolute inset-0 opacity-30 group-hover:scale-105 transition-transform duration-500"
@@ -365,6 +361,29 @@
               </div>
             </div>
           </div>
+        </section>
+
+        <!-- Dynamic Featured Repositories -->
+        <section class="space-y-8">
+          <div>
+            <h2 class="text-slate-100 text-3xl font-bold tracking-tight">Featured GitHub Repositories</h2>
+            <div class="h-1 w-20 bg-primary mt-2"></div>
+            <p class="text-slate-400 mt-4" id="project-status">Loading projects...</p>
+          </div>
+
+          <div id="dynamic-featured-projects" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+        </section>
+
+        <!-- More GitHub Projects -->
+        <section class="space-y-8">
+          <div class="flex items-end justify-between flex-wrap gap-4">
+            <div>
+              <h2 class="text-slate-100 text-3xl font-bold tracking-tight">More GitHub Projects</h2>
+              <div class="h-1 w-20 bg-primary mt-2"></div>
+            </div>
+          </div>
+
+          <div id="github-project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </section>
 
         <!-- Skills -->
@@ -503,5 +522,7 @@
       </footer>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
