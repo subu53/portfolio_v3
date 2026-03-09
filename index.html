@@ -69,38 +69,34 @@
     <div class="layout-container flex h-full grow flex-col">
 
       <!-- Navigation -->
-      <a href="#home" class="flex items-center gap-3 shrink-0">
- <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-4 flex items-center justify-between gap-6">
-    <span class="material-symbols-outlined text-primary text-[20px] leading-none">terminal</span>
+     <!-- Navigation -->
+<header class="sticky top-0 z-50 border-b border-primary/15 bg-background-dark/80 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-4 flex items-center justify-between gap-6">
+
+    <a href="#home" class="shrink-0">
+      <h1 class="text-slate-100 text-lg md:text-xl font-bold tracking-tight whitespace-nowrap">
+        Sammy S. Mutuku
+      </h1>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
+      <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#about">About</a>
+      <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#roles">Roles</a>
+      <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#projects">Projects</a>
+      <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#skills">Skills</a>
+      <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#education">Education</a>
+      <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
+    </nav>
+
+    <a
+      href="mailto:sammysubu@gmail.com"
+      class="inline-flex min-w-[120px] items-center justify-center rounded-full h-10 px-6 bg-accent text-white text-sm font-bold hover:scale-105 transition-transform active:scale-95 shrink-0"
+    >
+      Let’s Talk
+    </a>
+
   </div>
-
-  <div class="leading-tight">
-    <h1 class="text-slate-100 text-base md:text-lg font-bold tracking-tight whitespace-nowrap">
-      Sammy S. Mutuku
-    </h1>
-    <p class="text-[11px] md:text-xs text-slate-400 whitespace-nowrap">
-      Data Portfolio
-    </p>
-  </div>
-</a>
-
-          <nav class="hidden md:flex items-center gap-8">
-            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#about">About</a>
-            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#roles">Roles</a>
-            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#projects">Projects</a>
-            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#skills">Skills</a>
-            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#education">Education</a>
-            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
-          </nav>
-
-          <a
-            href="mailto:sammysubu@gmail.com"
-            class="inline-flex min-w-[120px] items-center justify-center rounded-full h-10 px-6 bg-accent text-white text-sm font-bold hover:scale-105 transition-transform active:scale-95"
-          >
-            Hire Me
-          </a>
-        </div>
-      </header>
+</header>
 
       <main class="flex flex-col max-w-7xl mx-auto w-full px-6 md:px-20 py-12 gap-20" id="home">
 
@@ -505,6 +501,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
