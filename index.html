@@ -1,435 +1,507 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html class="dark" lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Sammy S. Mutuku | Data Analyst • Data Scientist • ML Engineer</title>
+  <meta
+    name="description"
+    content="Portfolio of Sammy S. Mutuku — Data Analyst, Data Scientist, and ML Engineer building dashboards, predictive models, and deployable analytics tools."
+  />
 
-  <meta name="description" content="Data Analyst • Data Scientist • Machine Learning Engineer. Projects, competitions, experience, tools, and education." />
-  <meta property="og:title" content="Sammy S. Mutuku | Data Analyst • Data Scientist • ML Engineer" />
-  <meta property="og:description" content="Projects, competitions, experience, tools, and education." />
-  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <link rel="icon" href="assets/favicon.png" />
-  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#7fb069",
+            accent: "#E0604D",
+            "background-light": "#f7f7f6",
+            "background-dark": "#0e110d",
+            "card-dark": "#181c16",
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .glass {
+      background: rgba(24, 28, 22, 0.7);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-glow {
+      background:
+        radial-gradient(circle at top left, rgba(127, 176, 105, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(224, 96, 77, 0.14), transparent 28%);
+    }
+  </style>
 </head>
 
-<body>
-  <div class="bg"></div>
+<body class="bg-background-dark text-slate-100 min-h-screen">
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden hero-glow">
+    <div class="layout-container flex h-full grow flex-col">
 
-  <!-- ===== NAV ===== -->
-  <header class="hero" id="top">
-    <nav class="nav">
-      <a class="brand" href="#top" aria-label="Back to top">
-        <span class="dot"></span>
-        <span class="brandText">Sammy S. Mutuku</span>
-      </a>
-
-      <div class="navlinks" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Tools</a>
-        <a href="#work">Work</a>
-        <a href="#competitions">Competitions</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <div class="navcta">
-        <a class="btn ghost" href="https://github.com/subu53" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/samsubu/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn solid" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-      </div>
-    </nav>
-
-    <!-- ===== HERO ===== -->
-    <div class="heroWrap">
-      <div class="heroGrid">
-        <div class="heroText">
-          <p class="kicker">Data Scientist • Data Analyst  • Machine Learning Engineer</p>
-
-          <h1>
-            I turn <span class="grad">data</span> into decisions,
-            and models into <span class="grad2">shippable</span> systems.
-          </h1>
-
-          <p class="sub">
-            I build dashboards, KPI reports, and statistical analyses — and I also train machine learning models
-            (from classic ML to deep learning) with careful validation and interpretability.
-            My focus is practical, business-ready work: clean pipelines, strong evaluation, clear insights.
-          </p>
-
-          <div class="heroBadges">
-            <span class="chip">Python</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Excel</span>
-            <span class="chip">Tableau/BI</span>
-            <span class="chip">Scikit-learn</span>
-            <span class="chip">XGBoost</span>
-            <span class="chip">SHAP</span>
-            <span class="chip">Streamlit</span>
-          </div>
-
-          <div class="heroBtns">
-            <a class="btn solid" href="#work">View Featured Work</a>
-            <a class="btn ghost" href="#contact">Hire / Collaborate</a>
-          </div>
-
-          <div class="quickFacts">
-            <div class="qf">
-              <div class="qfLabel">Location</div>
-              <div class="qfValue">Nairobi, Kenya</div>
+      <!-- Navigation -->
+      <header class="sticky top-0 z-50 border-b border-primary/15 bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 md:px-20 py-4 flex items-center justify-between gap-4">
+          <a href="#home" class="flex items-center gap-3 text-primary">
+            <div class="size-9 flex items-center justify-center bg-primary/10 rounded-lg border border-primary/20">
+              <span class="material-symbols-outlined text-primary">terminal</span>
             </div>
-            <div class="qf">
-              <div class="qfLabel">Email</div>
-              <div class="qfValue"><a href="mailto:sammysubu@gmail.com">sammysubu@gmail.com</a></div>
+            <div>
+              <h1 class="text-slate-100 text-lg md:text-xl font-bold tracking-tight">Sammy S. Mutuku</h1>
+              <p class="text-xs text-slate-400">Data Portfolio</p>
             </div>
-            <div class="qf">
-              <div class="qfLabel">Open To</div>
-              <div class="qfValue">Remote • Hybrid • Contract</div>
-            </div>
-          </div>
-        </div>
+          </a>
 
-        <aside class="heroPanel" aria-label="Profile metrics">
-          <div class="panelTitle">Profile Snapshot</div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#about">About</a>
+            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#roles">Roles</a>
+            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#projects">Projects</a>
+            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#skills">Skills</a>
+            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#education">Education</a>
+            <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
+          </nav>
 
-          <div class="metrics">
-            <div class="metric">
-              <div class="metricTop">
-                <div class="metricLabel">GitHub Repositories</div>
-                <div class="metricDot"></div>
-              </div>
-              <div class="metricValue" id="repo-count">—</div>
-              <div class="metricHint">Public repos (non-fork)</div>
-            </div>
-
-            <div class="metric">
-              <div class="metricTop">
-                <div class="metricLabel">Featured Projects</div>
-                <div class="metricDot red"></div>
-              </div>
-              <div class="metricValue" id="featured-count">—</div>
-              <div class="metricHint">Pinned on this site</div>
-            </div>
-
-            <div class="metric">
-              <div class="metricTop">
-                <div class="metricLabel">Last Updated Repo</div>
-                <div class="metricDot"></div>
-              </div>
-              <div class="metricValue small" id="last-updated">—</div>
-              <div class="metricHint">Most recently updated</div>
-            </div>
-          </div>
-
-          <div class="panelFooter">
-            <a class="inline" href="https://zindi.africa/users/sammy_s_mutuku" target="_blank" rel="noreferrer">
-              Zindi profile →
-            </a>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </header>
-
-  <main class="main">
-    <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
-      <div class="sectionHead center">
-        <h2>About</h2>
-        <p>
-          I’m a Data Analyst and aspiring Data Scientist who enjoys the full stack of data work:
-          cleaning and exploration, KPI reporting, dashboards, statistical reasoning, and machine learning.
-        </p>
-      </div>
-
-      <div class="twoCol">
-        <article class="card">
-          <h3>What I do as a Data Analyst</h3>
-          <ul class="bullets">
-            <li><b>KPI dashboards</b>: define metrics, build dashboards, and track performance over time.</li>
-            <li><b>Reporting & insights</b>: convert messy data into clean summaries and actionable recommendations.</li>
-            <li><b>SQL + Excel workflows</b>: query, transform, and validate data reliably.</li>
-            <li><b>Stakeholder communication</b>: present results clearly with charts, narrative, and business impact.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>What I do as a Data Scientist / ML Engineer</h3>
-          <ul class="bullets">
-            <li><b>Predictive modeling</b>: regression/classification with leakage-safe validation.</li>
-            <li><b>Feature engineering</b>: domain-driven features + rigorous ablations.</li>
-            <li><b>Interpretability</b>: SHAP/LIME explanations for trust and adoption.</li>
-            <li><b>Deployable demos</b>: Streamlit apps + GitHub-ready documentation.</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="callout">
-        <div class="calloutTitle">My working style</div>
-        <p class="muted">
-          I prefer clean baselines first, then disciplined iteration:
-          better features, better validation, careful tuning, and strong reporting.
-          The goal is not just a score — it’s reliable performance you can explain.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== TOOLS / SKILLS ===== -->
-    <section class="section" id="skills">
-      <div class="sectionHead center">
-        <h2>Tools & Skills</h2>
-        <p>
-          Clear and explicit tool coverage (CV-style). This is what I’m comfortable using in real projects.
-        </p>
-      </div>
-
-      <div class="skillsGrid">
-        <div class="card">
-          <h3>Data Analysis</h3>
-          <div class="stack">
-            <span class="pill">SQL (joins, CTEs, window functions)</span>
-            <span class="pill">Excel (pivots, cleaning, dashboards)</span>
-            <span class="pill">EDA & descriptive statistics</span>
-            <span class="pill">Cohort / retention analysis</span>
-            <span class="pill">A/B test thinking (basic)</span>
-            <span class="pill">Data quality checks</span>
-            <span class="pill">KPI definition & reporting</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Visualization & BI</h3>
-          <div class="stack">
-            <span class="pill">Tableau / BI dashboards</span>
-            <span class="pill">Matplotlib / Plotly</span>
-            <span class="pill">Storytelling with data</span>
-            <span class="pill">Executive summaries</span>
-            <span class="pill">Data presentation for stakeholders</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Machine Learning</h3>
-          <div class="stack">
-            <span class="pill">Scikit-learn pipelines</span>
-            <span class="pill">XGBoost / LightGBM</span>
-            <span class="pill">Feature engineering</span>
-            <span class="pill">Leakage-safe validation</span>
-            <span class="pill">Calibration</span>
-            <span class="pill">Model evaluation (AUC, F1, RMSE)</span>
-            <span class="pill">Hyperparameter tuning</span>
-            <span class="pill">Ensembles & stacking</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Deep Learning & NLP</h3>
-          <div class="stack">
-            <span class="pill">TensorFlow / Keras</span>
-            <span class="pill">Transformers (BERT-style)</span>
-            <span class="pill">Text preprocessing</span>
-            <span class="pill">Embeddings</span>
-            <span class="pill">Sequence models (LSTM basics)</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Explainability</h3>
-          <div class="stack">
-            <span class="pill">SHAP</span>
-            <span class="pill">LIME</span>
-            <span class="pill">Feature importance</span>
-            <span class="pill">Error analysis</span>
-            <span class="pill">Model debugging</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Engineering & Workflow</h3>
-          <div class="stack">
-            <span class="pill">Git / GitHub</span>
-            <span class="pill">Reproducible notebooks</span>
-            <span class="pill">Streamlit demos</span>
-            <span class="pill">Documentation</span>
-            <span class="pill">Project structure & README</span>
-            <span class="pill">API thinking (basic)</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FEATURED WORK ===== -->
-    <section class="section" id="work">
-      <div class="sectionHead center">
-        <h2>Featured Work</h2>
-        <p>
-          Projects that best represent my capabilities: analytics + modeling + evaluation + communication.
-          (Auto-filled from GitHub; you can “pin” which repos show here in <code>script.js</code>.)
-        </p>
-      </div>
-
-      <div class="featuredWrap">
-        <div id="featured-container" class="grid featured"></div>
-        <div class="muted centerText" id="featured-status"></div>
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="sectionHead center smallTop">
-        <h2>All Projects</h2>
-        <p>
-          Search and filter my repositories. Sorted by most recently updated by default.
-        </p>
-      </div>
-
-      <div class="toolbar">
-        <input id="projectSearch" class="search" type="search" placeholder="Search projects (pricing, credit, sentiment, forecasting, dashboard...)"/>
-        <select id="sortSelect" class="select">
-          <option value="updated">Sort: Recently updated</option>
-          <option value="stars">Sort: Most stars</option>
-          <option value="name">Sort: Name (A–Z)</option>
-        </select>
-        <select id="langSelect" class="select">
-          <option value="all">Language: All</option>
-        </select>
-      </div>
-
-      <div id="project-container" class="grid"></div>
-      <div class="muted centerText" id="project-status"></div>
-    </section>
-
-    <!-- ===== COMPETITIONS ===== -->
-    <section class="section" id="competitions">
-      <div class="sectionHead center">
-        <h2>Competitions</h2>
-        <p>
-          I use competitions to practice fast iteration, disciplined validation, and clear writeups.
-          I focus on solutions that are both high-performing and defensible.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Zindi Highlights</h3>
-        <ul class="bullets">
-          <li><b>AgriBORA Commodity Price Forecasting</b> — forecasting & feature engineering</li>
-          <li><b>Farm to Feed Basket Recommendation</b> — recommendation logic & evaluation</li>
-          <li><b>DigiCow Farmer Training Adoption</b> — classification with careful validation</li>
-          <li><b>Financial Health Prediction</b> — robust modeling and leakage prevention</li>
-          <li><b>Rhea Soil Nutrient Prediction</b> — regression, error analysis, modeling strategy</li>
-        </ul>
-
-        <div class="row centerRow">
-          <a class="btn ghost" href="https://zindi.africa/" target="_blank" rel="noreferrer">Zindi</a>
-          <a class="btn solid" href="https://zindi.africa/users/sammy_s_mutuku" target="_blank" rel="noreferrer">
-            View my Zindi profile
+          <a
+            href="mailto:sammysubu@gmail.com"
+            class="inline-flex min-w-[120px] items-center justify-center rounded-full h-10 px-6 bg-accent text-white text-sm font-bold hover:scale-105 transition-transform active:scale-95"
+          >
+            Hire Me
           </a>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <!-- ===== EDUCATION ===== -->
-    <section class="section" id="education">
-      <div class="sectionHead center">
-        <h2>Education</h2>
-        <p>
-          My training combines university foundations with applied, project-heavy learning.
-        </p>
-      </div>
+      <main class="flex flex-col max-w-7xl mx-auto w-full px-6 md:px-20 py-12 gap-20" id="home">
 
-      <div class="timeline">
-        <div class="titem">
-          <div class="tline"></div>
-          <div class="tcard">
-            <div class="tTop">
-              <h3>BSc in Data Science — KCA University</h3>
-              <span class="badge">Sep 2023 – Present</span>
-            </div>
-            <p class="muted">
-              Core foundations in statistics, programming, and applied data science workflows.
+        <!-- Hero Section -->
+        <section class="flex flex-col gap-10 items-start justify-center min-h-[70vh]">
+          <div class="max-w-5xl space-y-6">
+            <p class="uppercase tracking-[0.25em] text-primary text-xs font-bold">
+              Open to Remote • Hybrid • Entry-Level • Contract
+            </p>
+
+            <h2 class="text-slate-100 text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight max-w-5xl">
+              I turn <span class="text-primary">data</span> into insights,
+              and models into <span class="text-accent">usable products</span>.
+            </h2>
+
+            <p class="text-slate-400 text-lg md:text-xl font-normal max-w-3xl leading-relaxed">
+              Data Analyst, Data Scientist, and ML Engineer focused on dashboards,
+              forecasting, predictive modeling, NLP, and deployable analytics tools.
+              I build practical work that connects business questions to measurable outcomes.
             </p>
           </div>
-        </div>
 
-        <div class="titem">
-          <div class="tline"></div>
-          <div class="tcard">
-            <div class="tTop">
-              <h3>Applied Data Science Lab — WorldQuant University</h3>
-              <span class="badge">Nov 2023 – May 2024</span>
-            </div>
-            <p class="muted">
-              Practical projects with real modeling, evaluation, and end-to-end analysis.
-            </p>
-          </div>
-        </div>
-
-        <div class="titem">
-          <div class="tline"></div>
-          <div class="tcard">
-            <div class="tTop">
-              <h3>Diploma in Mathematics & Statistics — Kenya Polytechnic University College</h3>
-              <span class="badge">Completed</span>
-            </div>
-            <p class="muted">
-              Strong base in quantitative reasoning and statistical thinking.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section class="section" id="contact">
-      <div class="sectionHead center">
-        <h2>Contact</h2>
-        <p>
-          If you need a Data Analyst who can also build models and ship demos, let’s talk.
-        </p>
-      </div>
-
-      <div class="twoCol">
-        <div class="card">
-          <h3>Reach me</h3>
-          <p class="muted">
-            Email: <a href="mailto:sammysubu@gmail.com">sammysubu@gmail.com</a><br/>
-            LinkedIn: <a href="https://www.linkedin.com/in/samsubu/" target="_blank" rel="noreferrer">/in/samsubu</a>
-          </p>
-
-          <div class="row">
-            <a class="btn solid" href="mailto:sammysubu@gmail.com">Email me</a>
-            <a class="btn ghost" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Quick links</h3>
-          <div class="stack">
-            <a class="linkCard" href="https://github.com/subu53" target="_blank" rel="noreferrer">
-              <span>GitHub</span><span class="arrow">→</span>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              class="flex items-center justify-center rounded-xl h-14 px-8 bg-accent text-white text-lg font-bold shadow-lg shadow-accent/20 hover:bg-accent/90 transition-all"
+            >
+              View Projects
             </a>
-            <a class="linkCard" href="https://zindi.africa/users/sammy_s_mutuku" target="_blank" rel="noreferrer">
-              <span>Zindi Profile</span><span class="arrow">→</span>
+            <a
+              href="https://github.com/subu53"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center rounded-xl h-14 px-8 border-2 border-primary/30 text-primary text-lg font-bold hover:bg-primary/5 transition-all"
+            >
+              View GitHub
             </a>
-            <a class="linkCard" href="assets/Sammy_SMutuku_Resume.pdf" target="_blank" rel="noreferrer">
-              <span>Resume (PDF)</span><span class="arrow">→</span>
+            <a
+              href="https://www.linkedin.com/in/samsubu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center rounded-xl h-14 px-8 border border-white/10 text-slate-200 text-lg font-bold hover:border-accent/50 hover:text-white transition-all"
+            >
+              LinkedIn
             </a>
           </div>
 
-          <p class="muted smallNote">
-            Tip: Upload your PDF into <code>assets/</code> and keep the exact file name used in the link above.
-          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Python</span>
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">SQL</span>
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Excel</span>
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Power BI</span>
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Tableau</span>
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Scikit-learn</span>
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">TensorFlow</span>
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">SHAP</span>
+            <span class="px-4 py-2 bg-card-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Streamlit</span>
+          </div>
+        </section>
+
+        <!-- Snapshot -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="flex flex-col gap-2 rounded-2xl border border-primary/20 bg-card-dark p-8 items-center text-center group hover:border-primary/50 transition-colors">
+            <span class="material-symbols-outlined text-primary text-4xl mb-2 group-hover:scale-110 transition-transform">analytics</span>
+            <p class="text-white text-3xl font-bold tracking-tight">Analytics</p>
+            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">Dashboards • KPIs • Reporting</p>
+          </div>
+
+          <div class="flex flex-col gap-2 rounded-2xl border border-accent/20 bg-card-dark p-8 items-center text-center group hover:border-accent/50 transition-colors">
+            <span class="material-symbols-outlined text-accent text-4xl mb-2 group-hover:scale-110 transition-transform">science</span>
+            <p class="text-white text-3xl font-bold tracking-tight">Modeling</p>
+            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">Forecasting • Classification • NLP</p>
+          </div>
+
+          <div class="flex flex-col gap-2 rounded-2xl border border-primary/20 bg-card-dark p-8 items-center text-center group hover:border-primary/50 transition-colors">
+            <span class="material-symbols-outlined text-primary text-4xl mb-2 group-hover:scale-110 transition-transform">deployed_code</span>
+            <p class="text-white text-3xl font-bold tracking-tight">Delivery</p>
+            <p class="text-slate-400 text-sm font-medium uppercase tracking-widest">GitHub • Apps • Deployable Demos</p>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="rounded-3xl border border-primary/15 bg-card-dark p-8 md:p-10">
+            <p class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">About Me</p>
+            <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-5">Analytical thinking with practical execution.</h3>
+            <p class="text-slate-400 leading-relaxed mb-4">
+              I am building my career at the intersection of data analysis, data science,
+              and machine learning engineering. My work focuses on understanding the problem,
+              exploring the data carefully, building strong baselines, improving with evidence,
+              and packaging the final result clearly.
+            </p>
+            <p class="text-slate-400 leading-relaxed">
+              I enjoy work that combines business insight, experimentation, predictive modeling,
+              and presentation. Whether it is a dashboard, a forecasting model, or an applied AI prototype,
+              I aim to make the output useful and believable.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-card-dark p-8 md:p-10">
+            <p class="text-accent text-sm font-bold uppercase tracking-[0.2em] mb-4">How I Work</p>
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="size-10 shrink-0 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">1</div>
+                <div>
+                  <h4 class="font-bold text-lg text-slate-100">Understand the problem</h4>
+                  <p class="text-slate-400">Start from the business or analytical question before choosing tools.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="size-10 shrink-0 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">2</div>
+                <div>
+                  <h4 class="font-bold text-lg text-slate-100">Explore and validate the data</h4>
+                  <p class="text-slate-400">Use EDA, cleaning, and feature checks to build reliable foundations.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="size-10 shrink-0 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">3</div>
+                <div>
+                  <h4 class="font-bold text-lg text-slate-100">Build disciplined models</h4>
+                  <p class="text-slate-400">Focus on validation, leakage prevention, interpretability, and iterative improvement.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="size-10 shrink-0 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">4</div>
+                <div>
+                  <h4 class="font-bold text-lg text-slate-100">Deliver clearly</h4>
+                  <p class="text-slate-400">Communicate insights or package the work into a demo, writeup, or usable app.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Roles -->
+        <section id="roles" class="space-y-8">
+          <div>
+            <h2 class="text-slate-100 text-3xl md:text-4xl font-bold tracking-tight">Target Roles</h2>
+            <div class="h-1 w-24 bg-primary mt-3"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-2xl border border-primary/20 bg-card-dark p-8">
+              <h3 class="text-2xl font-bold text-slate-100 mb-3">Data Analyst</h3>
+              <p class="text-slate-400 mb-4">
+                Turning data into dashboards, reports, KPIs, and stakeholder-ready insights.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm">Excel</span>
+                <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm">SQL</span>
+                <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm">Power BI</span>
+                <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm">Tableau</span>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-accent/20 bg-card-dark p-8">
+              <h3 class="text-2xl font-bold text-slate-100 mb-3">Data Scientist</h3>
+              <p class="text-slate-400 mb-4">
+                Building predictive models with strong validation, feature engineering, and explainability.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm">Python</span>
+                <span class="px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm">Scikit-learn</span>
+                <span class="px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm">XGBoost</span>
+                <span class="px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm">SHAP</span>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-primary/20 bg-card-dark p-8">
+              <h3 class="text-2xl font-bold text-slate-100 mb-3">ML Engineer</h3>
+              <p class="text-slate-400 mb-4">
+                Turning models into reproducible workflows, demos, and applied AI systems.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm">TensorFlow</span>
+                <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm">PyTorch</span>
+                <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm">Transformers</span>
+                <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm">Streamlit</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="space-y-8" id="projects">
+          <div class="flex items-end justify-between flex-wrap gap-4">
+            <div>
+              <h2 class="text-slate-100 text-3xl font-bold tracking-tight">Featured Projects</h2>
+              <div class="h-1 w-20 bg-primary mt-2"></div>
+            </div>
+            <a
+              class="text-primary font-medium hover:underline flex items-center gap-2"
+              href="https://github.com/subu53?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              All Repositories <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4 h-full md:h-[620px]">
+
+            <!-- Large -->
+            <div class="md:col-span-8 md:row-span-2 relative group overflow-hidden rounded-2xl bg-card-dark border border-slate-800">
+              <div
+                class="absolute inset-0 opacity-35 group-hover:scale-105 transition-transform duration-500"
+                style='background-image: linear-gradient(to bottom, rgba(24,28,22,0.15), #0e110d), url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop"); background-size: cover; background-position: center;'
+              ></div>
+              <div class="relative h-full flex flex-col justify-end p-8 gap-4">
+                <div class="flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-bold rounded-full border border-accent/30 uppercase tracking-tighter">Forecasting</span>
+                  <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full border border-primary/30 uppercase tracking-tighter">Zindi</span>
+                </div>
+                <h3 class="text-slate-100 text-3xl font-bold">AgriBORA Commodity Price Forecasting</h3>
+                <p class="text-slate-300 max-w-lg">
+                  Forecasting-focused competition work involving feature engineering,
+                  validation discipline, and practical iteration for stronger predictive performance.
+                </p>
+                <div class="flex gap-4 mt-2 flex-wrap">
+                  <a
+                    href="https://github.com/subu53"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-white text-background-dark px-6 py-2 rounded-lg font-bold text-sm"
+                  >
+                    View GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Small -->
+            <div class="md:col-span-4 md:row-span-1 relative group overflow-hidden rounded-2xl bg-card-dark border border-slate-800">
+              <div
+                class="absolute inset-0 opacity-30 group-hover:scale-105 transition-transform duration-500"
+                style='background-image: linear-gradient(to bottom, rgba(24,28,22,0.3), #0e110d), url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"); background-size: cover; background-position: center;'
+              ></div>
+              <div class="relative h-full flex flex-col justify-end p-6 gap-2">
+                <div class="flex gap-2">
+                  <span class="px-2 py-0.5 bg-primary/20 text-primary text-[10px] font-bold rounded-full border border-primary/30 uppercase">Analytics</span>
+                </div>
+                <h3 class="text-slate-100 text-xl font-bold">Strategic Price Prediction</h3>
+                <p class="text-slate-400 text-sm line-clamp-3">
+                  Revenue optimization project combining predictive modeling, segmentation,
+                  association rules, and explainability.
+                </p>
+              </div>
+            </div>
+
+            <!-- Small -->
+            <div class="md:col-span-4 md:row-span-1 relative group overflow-hidden rounded-2xl bg-card-dark border border-slate-800">
+              <div
+                class="absolute inset-0 opacity-30 group-hover:scale-105 transition-transform duration-500"
+                style='background-image: linear-gradient(to bottom, rgba(24,28,22,0.3), #0e110d), url("https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop"); background-size: cover; background-position: center;'
+              ></div>
+              <div class="relative h-full flex flex-col justify-end p-6 gap-2">
+                <div class="flex gap-2">
+                  <span class="px-2 py-0.5 bg-accent/20 text-accent text-[10px] font-bold rounded-full border border-accent/30 uppercase">Applied AI</span>
+                </div>
+                <h3 class="text-slate-100 text-xl font-bold">YouTube Sentiment / Emotion NLP</h3>
+                <p class="text-slate-400 text-sm line-clamp-3">
+                  NLP work using deep learning and explainability for sentiment, emotion,
+                  or sarcasm classification.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="py-12 bg-primary/5 rounded-[2rem] px-8 md:px-16 border border-primary/10" id="skills">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+              <h2 class="text-slate-100 text-4xl font-bold tracking-tight">Technical <br />Strengths</h2>
+              <p class="text-slate-400 leading-relaxed">
+                My work spans analysis, machine learning, experimentation, and delivery.
+                I focus on practical data workflows that are understandable, testable, and useful.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Python</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">SQL</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Excel</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Power BI</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Tableau</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Pandas</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Scikit-learn</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">TensorFlow</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">PyTorch</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">SHAP</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Git / GitHub</span>
+                <span class="px-4 py-2 bg-background-dark border border-primary/20 rounded-xl text-primary text-sm font-medium">Streamlit</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-6 bg-background-dark/50 rounded-2xl border border-white/5 space-y-2">
+                <span class="material-symbols-outlined text-accent">query_stats</span>
+                <h4 class="text-slate-100 font-bold">Data Analysis</h4>
+                <p class="text-slate-500 text-xs">Dashboards, KPIs, reporting, and stakeholder insights.</p>
+              </div>
+
+              <div class="p-6 bg-background-dark/50 rounded-2xl border border-white/5 space-y-2">
+                <span class="material-symbols-outlined text-primary">science</span>
+                <h4 class="text-slate-100 font-bold">Data Science</h4>
+                <p class="text-slate-500 text-xs">Forecasting, classification, feature engineering, explainability.</p>
+              </div>
+
+              <div class="p-6 bg-background-dark/50 rounded-2xl border border-white/5 space-y-2">
+                <span class="material-symbols-outlined text-accent">neurology</span>
+                <h4 class="text-slate-100 font-bold">Applied AI</h4>
+                <p class="text-slate-500 text-xs">NLP, deep learning, model experimentation, practical prototypes.</p>
+              </div>
+
+              <div class="p-6 bg-background-dark/50 rounded-2xl border border-white/5 space-y-2">
+                <span class="material-symbols-outlined text-primary">rocket_launch</span>
+                <h4 class="text-slate-100 font-bold">Delivery</h4>
+                <p class="text-slate-500 text-xs">GitHub projects, demos, writeups, and reproducible workflows.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="space-y-8">
+          <div>
+            <h2 class="text-slate-100 text-3xl font-bold tracking-tight">Education & Training</h2>
+            <div class="h-1 w-20 bg-primary mt-2"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="rounded-2xl border border-primary/20 bg-card-dark p-8">
+              <p class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-3">Current</p>
+              <h3 class="text-2xl font-bold mb-2">BSc in Data Science</h3>
+              <p class="text-slate-300 font-medium mb-2">KCA University</p>
+              <p class="text-slate-400">Sep 2023 – Present</p>
+            </div>
+
+            <div class="rounded-2xl border border-accent/20 bg-card-dark p-8">
+              <p class="text-accent text-sm font-bold uppercase tracking-[0.2em] mb-3">Professional Training</p>
+              <h3 class="text-2xl font-bold mb-2">Applied Data Science Lab</h3>
+              <p class="text-slate-300 font-medium mb-2">WorldQuant University</p>
+              <p class="text-slate-400">Project-based practical data science training</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="rounded-[2rem] border border-primary/10 bg-card-dark px-8 md:px-12 py-12">
+          <div class="flex flex-col lg:flex-row justify-between gap-8 lg:items-center">
+            <div class="max-w-2xl">
+              <p class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-3">Contact</p>
+              <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+                Interested in analytics, data science, or machine learning work?
+              </h2>
+              <p class="text-slate-400 leading-relaxed">
+                I am open to internships, entry-level opportunities, freelance work,
+                and collaborations involving dashboards, predictive modeling,
+                applied AI, and deployable analytics tools.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="mailto:sammysubu@gmail.com"
+                class="bg-accent text-white px-8 py-4 rounded-xl font-bold hover:bg-accent/90 transition-all text-center"
+              >
+                Email Me
+              </a>
+              <a
+                href="https://www.linkedin.com/in/samsubu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-primary/10 text-primary border border-primary/20 px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-background-dark transition-all text-center"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="border-t border-primary/10 mt-16 py-10 px-6 md:px-20 bg-background-dark">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="flex items-center gap-3">
+            <div class="size-6 bg-primary rounded-sm"></div>
+            <span class="font-bold text-slate-100">© 2026 Sammy S. Mutuku</span>
+          </div>
+
+          <div class="flex gap-6">
+            <a class="text-slate-400 hover:text-white transition-colors" href="https://www.linkedin.com/in/samsubu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="https://github.com/subu53" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="mailto:sammysubu@gmail.com">Email</a>
+          </div>
+
+          <a
+            href="mailto:sammysubu@gmail.com"
+            class="bg-primary/10 text-primary border border-primary/20 px-8 py-3 rounded-xl font-bold hover:bg-primary hover:text-background-dark transition-all"
+          >
+            Let's Talk
+          </a>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div>© <span id="year"></span> Sammy Mutuku</div>
-    <a href="#top" class="inline">Back to top ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
-
